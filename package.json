@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "chmod +x node_modules/.bin/vite && vite build",
     "preview": "vite preview",
-    "postinstall": "chmod +x node_modules/.bin/* || true"
+    "postinstall": "echo 'Postinstall completed'"
   },
   "dependencies": {
     "clsx": "2.1.1",
