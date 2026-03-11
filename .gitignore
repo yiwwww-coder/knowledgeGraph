@@ -1,0 +1,19 @@
+# 依赖
+node_modules/
+
+# 构建产物 (如果你在本地编译过，不要上传编译后的结果)
+dist/
+dist-ssr/
+*.local
+
+# 日志文件
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# 编辑器配置
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj

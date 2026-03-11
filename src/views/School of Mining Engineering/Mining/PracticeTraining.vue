@@ -196,8 +196,12 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
 import NavigationBar from '@/components/NavigationBar.vue'
+
+onMounted(() => {
+  document.title = "采矿工程"
+})
 
 const trainingData = [
   { title: '矿井通风与安全', count: 8, color: '#4a90e2', placeholderName: '通风网络解算' },

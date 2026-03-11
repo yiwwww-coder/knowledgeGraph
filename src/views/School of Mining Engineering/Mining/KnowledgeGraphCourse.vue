@@ -189,7 +189,11 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
+
+onMounted(() => {
+  document.title = "采矿工程"
+});
 
 const activeMenu = ref(0);
 const menuItems = ['课程拓扑链', '课程简介', '课程目标', '知识图谱', 'AI推荐课程'];

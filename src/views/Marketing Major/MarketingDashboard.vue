@@ -143,6 +143,9 @@ const statsData = {
 
 // 组件挂载后自动刷新
 onMounted(() => {
+  // 修改页面标题为"市场营销"
+  document.title = "市场营销"
+
   // 确保DOM完全加载后重新计算布局
   setTimeout(() => {
     // 触发一次重排

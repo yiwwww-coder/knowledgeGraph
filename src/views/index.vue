@@ -20,7 +20,7 @@
 <div class="nav-container">
 <div class="left">
 <img src="../assets/网站图标.png" class="logo">
-<span class="title">AI未来学习平台</span>
+<span class="title">AI未来学习空间</span>
 </div>
 
 <div class="menu">
@@ -30,7 +30,10 @@
 <div class="right">
 <button class="doc">文档中心</button>
 <button class="login">登录</button>
-<button class="register">注册</button>
+<button class="ai-nav-btn">
+<span class="ai-nav-icon">🤖</span>
+<span class="ai-nav-text">AI助手</span>
+</button>
 </div>
 </div>
 </header>
@@ -38,9 +41,9 @@
 <!-- Hero 区域增强版 -->
 <section class="hero">
 <div class="hero-content">
-<div class="hero-badge" @mouseenter="handleBadgeHover">✨ 未来教育领航者</div>
+<div class="hero-badge" @mouseenter="handleBadgeHover">✨以引领未来教育为奋斗目标</div>
 <h1 class="hero-title">
-<span class="gradient-text">AI未来学习中心</span>
+<span class="gradient-text">AI未来学习空间</span>
 </h1>
 <p class="hero-subtitle">AI Knowledge Graph · Smart Courses · Future Majors</p>
 
@@ -65,22 +68,7 @@
 </div>
 
 <!-- 动态波浪效果 -->
-<div class="hero-wave">
-<svg viewBox="0 0 1440 320" preserveAspectRatio="none">
-<path d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,154.7C960,171,1056,181,1152,170.7C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z" fill="url(#gradient)" fill-opacity="0.4">
-<animate attributeName="d" dur="20s" repeatCount="indefinite" values="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,154.7C960,171,1056,181,1152,170.7C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z;
-M0,160L48,144C96,128,192,96,288,106.7C384,117,480,171,576,186.7C672,203,768,181,864,160C960,139,1056,117,1152,122.7C1248,128,1344,160,1392,176L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z;
-M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,154.7C960,171,1056,181,1152,170.7C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"/>
-</path>
-<defs>
-<linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-<stop offset="0%" style="stop-color:#2563eb;stop-opacity:0.4" />
-<stop offset="50%" style="stop-color:#3b82f6;stop-opacity:0.4" />
-<stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:0.4" />
-</linearGradient>
-</defs>
-</svg>
-</div>
+
 </section>
 
 <!-- 模块标签增强版 -->
@@ -116,15 +104,7 @@ M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,86
 </div>
 </section>
 
-<!-- AI助手增强版 -->
-<div class="ai-assistant" @mouseenter="handleAIHover" @mouseleave="handleAILeave">
-<div class="ai-button">
-<span class="ai-icon">🤖</span>
-<span class="ai-text">AI助手</span>
-<div class="ai-pulse"></div>
-<div class="ai-glow"></div>
-</div>
-</div>
+
 
 <!-- 装饰元素增强版 -->
 <div class="floating-shapes">
@@ -155,35 +135,36 @@ const shape2=ref(null)
 const shape3=ref(null)
 const tabGlowRefs=ref([])
 
-const menuItems = ref(['首页', '课程', '专业', '院校', '资源'])
+const menuItems = ref(['首页', '资源', '课程', '专业', '院系','学院'])
 
 const stats = ref([
-{ number: '1000+', label: '课程资源' },
-{ number: '500+', label: '合作院校' },
-{ number: '50+', label: '专业方向' }
+{ number: '10+', label: '合作高校' },
+{ number: '90+', label: '合作院系' },
+{ number: '800+', label: '合作课程' },
+{ number: '4000+', label: '知识图谱' }
 ])
 
 const modulesList=ref([
-{name:"知识图谱",english:"Knowledge Graph"},
-{name:"智慧课程",english:"Smart Courses"},
-{name:"未来专业空间",english:"Future Major Space"},
-{name:"未来专业资源库",english:"Major Resource Library"},
-{name:"未来学校空间",english:"Future School Space"}
+{name:"AI知识图谱",english:"Knowledge Graph"},
+{name:"AI智慧课程",english:"Smart Courses"},
+{name:"未来专业学校空间",english:"Future Major Space"},
+{name:"AI专业资源库",english:"Major Resource Library"},
+{name:"未来学校学习空间",english:"Future School Space"}
 ])
 
 const majors=ref([
 {school:"山西大学",college:"外国语学院",major:"英语"},
 {school:"山西财经大学",college:"市场营销学院",major:"市场营销"},
-{school:"山西工程技术学院",college:"矿业工程系",major:"智能采矿工程"}
+{school:"山西工程技术学院",college:"矿业工程系",major:"采矿工程"}
 ])
 
 const goDetail=(item)=>{
 if(item.major==="英语"){
-router.push("/english")
+window.open("/english", "_blank")
 } else if(item.major==="市场营销"){
-router.push("/marketing-dashboard")
+window.open("/marketing-dashboard", "_blank")
 } else {
-router.push("/homepage")
+window.open("/homepage", "_blank")
 }
 }
 
@@ -394,7 +375,7 @@ min-height: 100vh;
 position: relative;
 overflow-x: hidden;
 font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-background: #0f172a;
+background: #f8fafc;
 }
 
 /* 深邃星空背景 */
@@ -416,13 +397,13 @@ left: 0;
 width: 100%;
 height: 100%;
 background: 
-radial-gradient(circle at 20% 30%, rgba(96, 165, 250, 0.4) 0%, transparent 45%),
-radial-gradient(circle at 80% 70%, rgba(129, 140, 248, 0.45) 0%, transparent 50%),
-radial-gradient(circle at 40% 80%, rgba(192, 132, 252, 0.4) 0%, transparent 55%),
-radial-gradient(circle at 60% 20%, rgba(59, 130, 246, 0.5) 0%, transparent 45%);
+radial-gradient(circle at 20% 30%, rgba(96, 165, 250, 0.2) 0%, transparent 45%),
+radial-gradient(circle at 80% 70%, rgba(129, 140, 248, 0.25) 0%, transparent 50%),
+radial-gradient(circle at 40% 80%, rgba(192, 132, 252, 0.2) 0%, transparent 55%),
+radial-gradient(circle at 60% 20%, rgba(59, 130, 246, 0.3) 0%, transparent 45%);
 animation: auroraDeepFloat 25s ease-in-out infinite;
 z-index: 1;
-opacity: 0.95;
+opacity: 0.8;
 }
 
 .aurora-overlay-light {
@@ -432,7 +413,7 @@ left: 0;
 width: 100%;
 height: 100%;
 background: 
-linear-gradient(125deg, rgba(15, 23, 42, 0.7) 0%, rgba(30, 41, 59, 0.65) 50%, rgba(20, 30, 50, 0.7) 100%);
+linear-gradient(125deg, rgba(248, 250, 252, 0.7) 0%, rgba(241, 245, 249, 0.65) 50%, rgba(248, 250, 252, 0.7) 100%);
 z-index: 2;
 }
 
@@ -528,9 +509,9 @@ transition: all 0.3s ease;
 }
 
 .nav.scrolled {
-background: rgba(15, 23, 42, 0.85);
+background: rgba(255, 255, 255, 0.85);
 backdrop-filter: blur(20px);
-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 border-bottom: 1px solid rgba(59, 130, 246, 0.3);
 }
 
@@ -553,13 +534,13 @@ gap: 12px;
 width: 40px;
 height: 40px;
 border-radius: 12px;
-box-shadow: 0 0 25px rgba(59, 130, 246, 0.5);
+box-shadow: 0 0 25px rgba(59, 130, 246, 0.2);
 }
 
 .title {
 font-size: 18px;
 font-weight: 600;
-background: linear-gradient(135deg, #fff, #cbd5e1);
+background: linear-gradient(135deg, #334155, #1e293b);
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
 }
@@ -572,7 +553,7 @@ gap: 40px;
 .menu-item {
 font-size: 16px;
 font-weight: 500;
-color: #e2e8f0;
+color: #334155;
 cursor: pointer;
 position: relative;
 padding: 5px 0;
@@ -585,7 +566,7 @@ position: absolute;
 top: 0;
 left: 0;
 width: 0;
-color: #60a5fa;
+color: #3b82f6;
 white-space: nowrap;
 overflow: hidden;
 transition: width 0.3s ease;
@@ -634,25 +615,25 @@ overflow: hidden;
 
 .doc {
 background: transparent;
-color: #e2e8f0;
+color: #334155;
 border: 1px solid rgba(59, 130, 246, 0.4);
 }
 
 .doc:hover {
 background: rgba(37, 99, 235, 0.15);
-border-color: #60a5fa;
+border-color: #3b82f6;
 box-shadow: 0 0 25px rgba(59, 130, 246, 0.4);
 }
 
 .login {
 background: transparent;
-border: 1px solid rgba(203, 213, 225, 0.4);
-color: #e2e8f0;
+border: 1px solid rgba(59, 130, 246, 0.4);
+color: #334155;
 }
 
 .login:hover {
-border-color: #60a5fa;
-color: #60a5fa;
+border-color: #3b82f6;
+color: #3b82f6;
 box-shadow: 0 0 25px rgba(59, 130, 246, 0.3);
 }
 
@@ -691,6 +672,58 @@ opacity: 1;
 animation: rotate 2s linear infinite;
 }
 
+.ai-nav-btn {
+padding: 8px 16px;
+border-radius: 30px;
+font-size: 14px;
+font-weight: 500;
+cursor: pointer;
+transition: all 0.3s;
+border: 1px solid rgba(59, 130, 246, 0.4);
+position: relative;
+overflow: hidden;
+display: flex;
+align-items: center;
+gap: 6px;
+background: linear-gradient(135deg, #2563eb, #3b82f6, #8b5cf6);
+color: white;
+box-shadow: 0 4px 20px rgba(37, 99, 235, 0.5);
+background-size: 200% 100%;
+animation: gradientShift 3s infinite;
+}
+
+.ai-nav-btn:hover {
+transform: translateY(-2px);
+box-shadow: 0 8px 35px rgba(37, 99, 235, 0.7);
+}
+
+.ai-nav-btn::before {
+content: '';
+position: absolute;
+top: -50%;
+left: -50%;
+width: 200%;
+height: 200%;
+background: radial-gradient(circle, rgba(255,255,255,0.4) 0%, transparent 70%);
+opacity: 0;
+transition: opacity 0.3s;
+}
+
+.ai-nav-btn:hover::before {
+opacity: 1;
+animation: rotate 2s linear infinite;
+}
+
+.ai-nav-icon {
+font-size: 16px;
+filter: drop-shadow(0 0 4px white);
+}
+
+.ai-nav-text {
+font-size: 14px;
+font-weight: 500;
+}
+
 @keyframes rotate {
 from { transform: rotate(0deg); }
 to { transform: rotate(360deg); }
@@ -718,15 +751,15 @@ position: relative;
 .hero-badge {
 display: inline-block;
 padding: 10px 24px;
-background: rgba(37, 99, 235, 0.25);
+background: rgba(37, 99, 235, 0.15);
 border-radius: 40px;
-color: #a5d8ff;
+color: #1e40af;
 font-size: 15px;
 font-weight: 500;
 margin-bottom: 30px;
 backdrop-filter: blur(10px);
 border: 1px solid rgba(59, 130, 246, 0.4);
-box-shadow: 0 0 40px rgba(37, 99, 235, 0.3);
+box-shadow: 0 0 40px rgba(37, 99, 235, 0.2);
 transition: all 0.3s;
 cursor: default;
 }
@@ -760,10 +793,9 @@ filter: drop-shadow(0 0 25px rgba(59, 130, 246, 0.4));
 
 .hero-subtitle {
 font-size: 20px;
-color: #cbd5e1;
+color: #64748b;
 margin-bottom: 40px;
 letter-spacing: 1px;
-text-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
 
 .search-wrapper {
@@ -774,10 +806,10 @@ margin: 0 auto 50px;
 .search-box {
 display: flex;
 gap: 12px;
-background: rgba(30, 41, 59, 0.8);
+background: rgba(255, 255, 255, 0.8);
 padding: 5px;
 border-radius: 60px;
-box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(59, 130, 246, 0.4);
+box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(59, 130, 246, 0.4);
 border: 1px solid rgba(59, 130, 246, 0.3);
 backdrop-filter: blur(10px);
 transition: all 0.3s;
@@ -785,7 +817,7 @@ transition: all 0.3s;
 
 .search-box:hover {
 transform: scale(1.02);
-box-shadow: 0 30px 50px rgba(37, 99, 235, 0.4), 0 0 0 2px rgba(59, 130, 246, 0.5);
+box-shadow: 0 30px 50px rgba(37, 99, 235, 0.2), 0 0 0 2px rgba(59, 130, 246, 0.5);
 }
 
 .search-box input {
@@ -796,7 +828,7 @@ border-radius: 60px;
 font-size: 16px;
 outline: none;
 background: transparent;
-color: #f1f5f9;
+color: #334155;
 }
 
 .search-box input::placeholder {
@@ -860,30 +892,31 @@ cursor: default;
 transition: all 0.3s;
 padding: 15px 25px;
 border-radius: 20px;
-background: rgba(30, 41, 59, 0.4);
+background: rgba(255, 255, 255, 0.7);
 backdrop-filter: blur(5px);
 border: 1px solid rgba(59, 130, 246, 0.3);
+box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
 .stat-item:hover {
 transform: translateY(-5px);
-background: rgba(37, 99, 235, 0.25);
-border-color: #60a5fa;
-box-shadow: 0 10px 35px rgba(37, 99, 235, 0.4);
+background: rgba(37, 99, 235, 0.15);
+border-color: #3b82f6;
+box-shadow: 0 10px 35px rgba(37, 99, 235, 0.3);
 }
 
 .stat-number {
 display: block;
 font-size: 36px;
 font-weight: 700;
-background: linear-gradient(135deg, #fff, #cbd5e1);
+background: linear-gradient(135deg, #334155, #1e293b);
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
 margin-bottom: 5px;
 }
 
 .stat-label {
-color: #cbd5e1;
+color: #64748b;
 font-size: 16px;
 font-weight: 500;
 }
@@ -916,11 +949,11 @@ margin: 0 auto;
 display: flex;
 gap: 15px;
 padding: 12px;
-background: rgba(30, 41, 59, 0.8);
+background: rgba(255, 255, 255, 0.8);
 backdrop-filter: blur(20px);
 border-radius: 60px;
 border: 1px solid rgba(59, 130, 246, 0.3);
-box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
 
 .tab-btn {
@@ -972,9 +1005,11 @@ opacity: 1;
 }
 
 .tab-btn.active {
-background: rgba(37, 99, 235, 0.25);
-border-color: rgba(59, 130, 246, 0.6);
-box-shadow: 0 10px 25px rgba(37, 99, 235, 0.4);
+background: linear-gradient(135deg, rgba(37, 99, 235, 0.2) 0%, rgba(139, 92, 246, 0.2) 100%);
+border-color: rgba(59, 130, 246, 0.8);
+box-shadow: 0 10px 25px rgba(37, 99, 235, 0.4), 0 0 30px rgba(139, 92, 246, 0.3);
+animation: gradientShift 3s infinite;
+background-size: 200% 100%;
 }
 
 .tab-num {
@@ -987,20 +1022,28 @@ transition: all 0.3s;
 
 .tab-btn.active .tab-num {
 opacity: 1;
-color: #90d2ff;
-text-shadow: 0 0 25px #3b82f6;
+color: #3b82f6;
+text-shadow: 0 0 25px #60a5fa;
+}
+
+.tab-btn.active .tab-text h3 {
+color: #1e40af;
+}
+
+.tab-btn.active .tab-text p {
+color: #3b82f6;
 }
 
 .tab-text h3 {
 font-size: 16px;
 font-weight: 600;
-color: #f1f5f9;
+color: #334155;
 margin-bottom: 4px;
 }
 
 .tab-text p {
 font-size: 12px;
-color: #cbd5e1;
+color: #64748b;
 }
 
 /* 专业列表区域 */
@@ -1023,7 +1066,7 @@ display: flex;
 justify-content: space-between;
 align-items: center;
 padding: 24px 30px;
-background: rgba(30, 41, 59, 0.7);
+background: rgba(255, 255, 255, 0.7);
 backdrop-filter: blur(10px);
 border-radius: 24px;
 cursor: pointer;
@@ -1031,7 +1074,7 @@ transition: all 0.3s;
 border: 1px solid rgba(59, 130, 246, 0.3);
 position: relative;
 overflow: hidden;
-box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
 
 .item-glow {
@@ -1065,23 +1108,23 @@ gap: 6px;
 .major-name {
 font-size: 20px;
 font-weight: 600;
-color: #f1f5f9;
+color: #334155;
 }
 
 .college-name {
 font-size: 15px;
-color: #cbd5e1;
+color: #64748b;
 }
 
 .school-badge {
 padding: 10px 20px;
-background: rgba(37, 99, 235, 0.25);
+background: rgba(37, 99, 235, 0.15);
 border-radius: 40px;
-color: #a5d8ff;
+color: #1e40af;
 font-size: 15px;
 font-weight: 500;
 border: 1px solid rgba(59, 130, 246, 0.4);
-box-shadow: 0 0 15px rgba(37, 99, 235, 0.3);
+box-shadow: 0 0 15px rgba(37, 99, 235, 0.2);
 }
 
 /* AI助手增强版 */
@@ -1227,6 +1270,7 @@ animation: floatShape3 15s infinite;
 }
 
 /* 响应式 */
+/* 移动设备 */
 @media (max-width: 768px) {
 .nav-container {
 padding: 0 20px;
@@ -1236,6 +1280,11 @@ gap: 15px;
 
 .menu {
 display: none;
+}
+
+.right {
+flex-wrap: wrap;
+justify-content: center;
 }
 
 .hero-title {
@@ -1261,6 +1310,125 @@ gap: 15px;
 
 .school-badge {
 align-self: flex-start;
+}
+
+.ai-nav-btn {
+font-size: 12px;
+padding: 6px 12px;
+}
+
+.ai-nav-text {
+font-size: 12px;
+}
+}
+
+/* 小屏幕笔记本电脑 */
+@media (min-width: 769px) and (max-width: 1024px) {
+.nav-container {
+padding: 0 30px;
+}
+
+.menu {
+gap: 25px;
+}
+
+.menu-item {
+font-size: 14px;
+}
+
+.hero-title {
+font-size: 60px;
+}
+
+.hero-stats {
+gap: 40px;
+}
+
+.module-tabs {
+padding: 10px;
+}
+
+.tab-btn {
+padding: 12px 16px;
+}
+
+.tab-text h3 {
+font-size: 14px;
+}
+
+.tab-text p {
+font-size: 11px;
+}
+
+.major-item {
+padding: 20px 25px;
+}
+
+.major-name {
+font-size: 18px;
+}
+
+.college-name {
+font-size: 14px;
+}
+}
+
+/* 中等屏幕电脑 */
+@media (min-width: 1025px) and (max-width: 1440px) {
+.nav-container {
+padding: 0 40px;
+}
+
+.hero-title {
+font-size: 72px;
+}
+
+.hero-stats {
+gap: 50px;
+}
+
+.module-tabs {
+max-width: 1100px;
+}
+
+.majors-section {
+max-width: 900px;
+}
+}
+
+/* 大屏幕电脑 */
+@media (min-width: 1441px) {
+.nav-container {
+max-width: 1400px;
+padding: 0 50px;
+}
+
+.hero-title {
+font-size: 84px;
+}
+
+.hero-content {
+max-width: 1200px;
+}
+
+.module-tabs {
+max-width: 1300px;
+}
+
+.majors-section {
+max-width: 1100px;
+}
+
+.major-item {
+padding: 28px 35px;
+}
+
+.major-name {
+font-size: 22px;
+}
+
+.college-name {
+font-size: 16px;
 }
 }
 </style>

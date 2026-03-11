@@ -132,8 +132,12 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
 import NavigationBar from '@/components/NavigationBar.vue'
+
+onMounted(() => {
+  document.title = "采矿工程"
+})
 
 const hotTopics = ref([
   {

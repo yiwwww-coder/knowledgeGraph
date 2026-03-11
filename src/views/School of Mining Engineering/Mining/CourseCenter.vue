@@ -109,11 +109,15 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed } from 'vue'
+import { ref, computed, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 import NavigationBar from '@/components/NavigationBar.vue'
 
 const router = useRouter()
+
+onMounted(() => {
+  document.title = "采矿工程"
+})
 
 const navigateToCourse = (course: any) => {
   if (course.hasKnowledgeGraph) {

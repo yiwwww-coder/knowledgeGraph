@@ -179,7 +179,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 import NavigationBar from '@/components/NavigationBar.vue'
 
@@ -241,6 +241,11 @@ const toggleExpand = () => {
 const navigateToMajor = (route: string) => {
   router.push(route)
 }
+
+onMounted(() => {
+  // 修改页面标题为"采矿工程"
+  document.title = "采矿工程"
+})
 </script>
 
 <style scoped>

@@ -612,6 +612,9 @@ const handleSubtitleClick = (e) => {
 }
 
 onMounted(() => {
+  // 修改页面标题为"英语"
+  document.title = "英语"
+
   // 初始化触摸设备下拉
   handleTouchDropdown()
 

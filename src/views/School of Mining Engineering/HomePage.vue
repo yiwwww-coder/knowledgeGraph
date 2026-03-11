@@ -358,7 +358,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 
 const router = useRouter()
@@ -382,6 +382,12 @@ const toggleExpand = () => {
 const navigateToMiningEngineering = () => {
   router.push('/mining-engineering')
 }
+
+// 组件挂载后修改页面标题
+onMounted(() => {
+  // 修改页面标题为"采矿工程"
+  document.title = "矿业工程系"
+})
 </script>
 
 <style scoped>

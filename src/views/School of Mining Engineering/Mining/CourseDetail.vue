@@ -177,6 +177,14 @@
   </div>
 </template>
 
+<script setup>
+import { onMounted } from 'vue'
+
+onMounted(() => {
+  document.title = "采矿工程"
+})
+</script>
+
 <style scoped>
 .course-detail-container {
   background-color: #f6f7f9;
